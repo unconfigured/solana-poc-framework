@@ -705,7 +705,8 @@ impl LocalEnvironmentBuilder {
 
     /// Finalizes the environment.
     pub fn build(&mut self) -> LocalEnvironment {
-        let tmpdir = TempDir::new().expect("make tempdir");
+        // let tmpdir = TempDir::new().expect("make tempdir");
+        let tmpdir = Path::new("/tmp/");
 
         let bank = Bank::new_with_paths(
             &self.config,
