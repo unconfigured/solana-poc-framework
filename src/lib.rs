@@ -710,7 +710,8 @@ impl LocalEnvironmentBuilder {
 
         let bank = Bank::new_with_paths(
             &self.config,
-            vec![tmpdir.path().to_path_buf()],
+            // vec![tmpdir.path().to_path_buf()],
+            vec![tmpdir.to_path_buf()],
             &[],
             None,
             Some(&Builtins {
